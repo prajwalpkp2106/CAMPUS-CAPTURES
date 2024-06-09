@@ -1,0 +1,219 @@
+table-striped table-bordered table-sm.sorting:after,
+table-striped table-bordered table-sm.sorting:before,
+table-striped table-bordered table-sm.sorting_asc:after,
+table-striped table-bordered table-sm.sorting_asc:before,
+table-striped table-bordered table-sm.sorting_asc_disabled:after,
+table-striped table-bordered table-sm.sorting_asc_disabled:before,
+table-striped table-bordered table-sm.sorting_desc:after,
+table-striped table-bordered table-sm.sorting_desc:before,
+table-striped table-bordered table-sm.sorting_desc_disabled:after,
+table-striped table-bordered table-sm.sorting_desc_disabled:before 
+{
+  bottom: .5em;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  padding:100px;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(to left,#7cc7e3,#96a1ff);
+  padding: 50px;
+  
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgb(9, 48, 104);
+  height: 80px;
+  width: 100%;
+  z-index: 999; 
+  }
+
+.logosymbol img{
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: 2px;
+  margin-left: 5px;
+
+}
+
+label.logo{
+  color:#ffffff;
+  font-size: 30px;
+  font-family:   'Montserrat', sans-serif;
+  line-height: 80px;
+  padding: 0 30px;
+  padding-left: 100px;
+  font-weight: 100;
+  font-style: italic;
+  display: inline;  
+}
+
+
+nav ul {
+  float: right;
+  margin-top: 0px;
+  margin-right: 20px;
+}
+
+nav ul li{
+  display: inline-block;
+  line-height: 80px ;
+  margin: 0 10px
+}
+
+nav ul li a{
+font-family:   'Montserrat', sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 17px;
+  padding: 7px 13px ;
+  border-radius: 3px;
+  text-transform: uppercase; 
+  text-decoration: none;   
+}
+
+a.active,a:hover{
+  background: #135bd7;
+  transition: .25s;
+}
+
+nav ul li a[href="/campus_captures/logout.php"] {
+  border: 2px solid lightblue;
+  padding: 10px; }
+
+.App {
+
+  /* max-width: 900px; */
+  margin: 0 auto;
+  /* background-color: #d8ddff; */
+  padding: 20px;
+  /* box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); */
+  /* border-radius: 3px; */
+  text-align: center;
+}
+.App h1 {
+  background-color: #d8ddff;
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+  font-size: 23px;
+}
+
+.alertinfo{
+  padding: 5px;
+  font-size: 20px;
+  color: #017ada;
+  /* background-color: #c1d9ee; */
+  border: 2px dotted #017ada ;
+}
+
+.max{
+  font-size:19px ;
+}
+
+p {
+  font-size: 18px;
+  color: black;
+  font-weight: 600;
+  line-height: 27px;
+  margin: 0 0 17px 0;
+}
+h4 {
+  font-size: 21px;
+  font-weight: 600;
+}
+.btn__default {
+  cursor: pointer;
+  display: flex;
+  font-size: 1.3em;
+  padding: 10px 20px;
+  border-radius: 7px;
+  border-color: transparent;
+  position: relative;
+  border: 0;
+  outline: 0;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%), 0 1px 2px 0 rgb(0 0 0 / 6%);
+  background-image: linear-gradient(to bottom right, #03a9f4 0%, #2196f3 100%) !important;
+  color: white;
+}
+
+label {
+  font-size: 18px;
+  margin-bottom: 10px;
+  display: flex;
+  font-weight: 600;
+}
+input.form__field__img {
+  width: 637px;
+  font-size: 20px;
+  border: 1px solid #f7f7f7;
+  background-color: #ffffff;
+  padding: 17px;
+  border-radius: 7px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -1px rgb(0 0 0 / 6%);
+  margin-bottom: 27px;
+}
+.form__field {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  padding: 27px 0px 10px 0px;
+}
+.status__msg {
+  font-size: 18px;
+ 
+  color:red;
+  border: 1px dashed;
+  padding: 10px;
+  margin-bottom: 27px;
+}
+.gallery img {
+  max-width: 100%;
+  height: 260px;
+  object-fit: contain;
+  margin-right: 17px;
+  margin-left: 17px;
+  margin-bottom: 20px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+}
+
+.gallery h2 {
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  animation: fade-in 1s ease-in-out;
+}
+
+@keyframes fade-in {
+  0% {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+h1 .upload{
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+

@@ -1,0 +1,238 @@
+table-striped table-bordered table-sm.sorting:after,
+table-striped table-bordered table-sm.sorting:before,
+table-striped table-bordered table-sm.sorting_asc:after,
+table-striped table-bordered table-sm.sorting_asc:before,
+table-striped table-bordered table-sm.sorting_asc_disabled:after,
+table-striped table-bordered table-sm.sorting_asc_disabled:before,
+table-striped table-bordered table-sm.sorting_desc:after,
+table-striped table-bordered table-sm.sorting_desc:before,
+table-striped table-bordered table-sm.sorting_desc_disabled:after,
+table-striped table-bordered table-sm.sorting_desc_disabled:before 
+{
+  bottom: .5em;
+}
+body{
+  display: grid;
+  /* background: linear-gradient(to left,#85ddfd,#96a1ff); */
+ /* background-color:rgb(62, 111, 188); */
+ background: linear-gradient(to left,#7cc7e3,#96a1ff);
+
+}
+.bold-text {
+  font-weight: bold;
+}
+
+/* nav bar  */
+nav{
+ 
+  background:  rgb(9, 48, 104);
+  height: 80px;
+  width: 100%;
+}
+
+
+.logosymbol img{
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: 2px;
+  margin-left: 5px;
+
+
+}
+label.logo{
+  color:#ffffff;
+  font-size: 30px;
+  font-family:   'Montserrat', sans-serif;
+  line-height: 80px;
+  padding: 0 30px;
+  padding-left: 100px;
+  font-weight: 100;
+  font-style: italic;
+  display: inline;
+
+}
+nav ul li a[href="/campus_captures/logout.php"] {
+  border: 2px solid lightblue;
+  padding: 10px; /
+}
+
+
+
+
+nav ul {
+  margin-top: 0px;
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul li{
+  
+  display: inline-block;
+  line-height: 80px ;
+  margin: 0 10px
+}
+
+nav ul li a{
+  color: rgb(255, 255, 255);
+  font-size: 17px;
+  padding: 7px 13px ;
+  border-radius: 3px;
+  text-transform: uppercase;    
+}
+
+a.active,a:hover{
+  color: white;
+  background: #135bd7;
+    /* background: linear-gradient(to left,#7cc7e3,#96a1ff); */
+    transition: .25s;
+    text-decoration: none;
+}
+
+.sub-menu{
+   display: none;
+   position: absolute;
+   z-index: 1; 
+   width: 120px;
+}
+
+nav ul li:hover .sub-menu{
+  display: block;
+  position: absolute;
+  background: rgba(224, 221, 238, 0.2); 
+  margin-top:-7px;
+  margin-left: -5px;
+}
+nav ul li:hover .sub-menu ul {
+  display: block;
+  margin: 10px;
+
+}
+
+nav ul li:hover .sub-menu ul li{
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border-bottom: 1px dotted #fff;
+  /* background: transparent; */
+  border-radius: 0;
+  text-align: left;
+
+}
+
+nav ul li:hover .sub-menu ul li:last-child{
+  border-bottom: none;
+}
+
+nav ul li:hover .sub-menu ul li a:hover{
+  color: wheat;
+}
+.table-container {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.table-container table {
+  font-family: "Lato", sans-serif;
+}
+
+
+.btn{
+    color: rgb(255, 255, 255);
+    background-color: rgb(27, 0, 145);
+    border: none;
+    outline: none;
+    font-size: 17px;
+    margin-top: 10px;
+    padding: 8px 5px;
+    border-radius: 5px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+#right{
+  text-align: right;
+  padding-right: 120px;
+}
+
+.btn:hover{
+  color: white;
+   background-color: rgb(132, 101, 200);
+   letter-spacing: 1px;
+    transform: scale(1);
+    box-shadow: 0 10px 15px rgba(74, 70, 70, 0.3) ;
+}
+
+#color{
+  color: black;
+  background-color: rgb(243, 229, 171);
+}
+
+/* edit and delete */
+.btn-primary{
+  color: antiquewhite;
+  background-color: rgb(24, 0, 83)
+}
+
+/* table head */
+.th-sm{
+  color: rgb(255, 255, 255);
+  background-color:rgb(5, 24, 91);
+}
+
+/* table row color */
+table{
+  border: 1px solid black;
+  background-color: rgb(255, 255, 255);
+  box-shadow: -1px 12px 12px -6px rgba(67, 69, 73, 0.5);
+}
+.wbtn{
+  background-color: rgb(9, 48, 104);;
+}
+
+
+
+
+/* .action{
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+.action.icon{
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.action.icon img{
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.action.menu{
+  position: absolute;
+  top: 80px;
+  right: -10px;
+  padding: 10px 20px;
+  background: palevioletred;
+}
+
+img{
+  height: 70px;
+  width: 70px;
+}
+ */

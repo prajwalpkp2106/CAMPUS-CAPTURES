@@ -1,0 +1,29 @@
+body{
+    height: 750px;
+    /* background: linear-gradient( to right bottom , #ffffff, #c9f2f6,#2408a3) */
+    background: linear-gradient(to left,#7cc7e3,#96a1ff);
+}
+
+h2{
+    color: rgb(255, 255, 255);
+}
+
+p{
+    color: antiquewhite;
+}
+.continue{
+    color:#2408a3;
+}
+.container{
+    background-color: rgb(28, 2, 99);
+
+    width: 750px;
+    height: 300px;
+    border-radius: 2.5%;
+    align-items: center;
+    margin-top: 200px;
+}
+.button{
+    background-color:#c9f2f6;
+    color:black;
+}

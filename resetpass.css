@@ -1,0 +1,30 @@
+body{
+    /* height: 750px; */
+    /* background: linear-gradient( to right bottom , #ffffff, #c9f2f6,#6b0dd6) */
+    background: linear-gradient(to left,#7cc7e3,#96a1ff);
+}
+
+h2{
+    color: rgb(255, 255, 255);
+}
+
+p{
+    color: antiquewhite;
+}
+.continue{
+    color:#2408a3;
+}
+.container{
+    background-color: rgb(6, 11, 108);
+
+    width: 750px;
+    height: 225px;
+    border-radius: 2.5%;
+    align-items: center;
+    margin-top: 225px;
+}
+
+.button{
+    background-color:#c9f2f6;
+    color:black;
+}

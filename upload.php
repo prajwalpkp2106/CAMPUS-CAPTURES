@@ -1,0 +1,104 @@
+<?php
+ include 'partials/_dbconnect.php';
+ 
+session_start();
+$statusMsg = '';
+// var_dump($_SESSION['table_name']);
+//  exit();
+
+// if(isset($_POST['task'])&& $_POST['task']=='delete')
+//     {   $newtable=$_SESSION['table_name']."_images";
+		
+//        // $table_name=$_POST["table_name"];
+//         $id=$_POST['id'];
+//         $sql="DELETE from $newtable where id='$id' ";
+//    //     var_dump($sql);exit;
+//         $result= mysqli_query($conn,$sql);
+// 		if (unlink($filePathToDelete)) {
+// 			unset($images_arr[$id]); // Remove deleted image from the array
+// 			header("location: deleteimages.php");
+// 			exit;
+// 		}
+//       //  var_dump($result);exit;
+//      //   $num=mysqli_num_rows($result);
+//      header("location: deleteimages.php");
+//     } 
+if (isset($_POST['task']) && $_POST['task'] == 'delete') {
+    $newtable = $_SESSION['table_name'] . "_images";
+    $id = $_POST['id'];
+      
+    // Fetch the file path before deleting from the database
+    $filePathToDelete = '';
+    $query = "SELECT file_name FROM $newtable WHERE id = '$id'";
+    $result = mysqli_query($conn, $query);
+    if ($row = mysqli_fetch_assoc($result)) {
+        $filePathToDelete = $row['file_name'];
+    }
+
+    $sql = "DELETE FROM $newtable WHERE id = '$id'";
+    $result = mysqli_query($conn, $sql);
+
+    if ($result && unlink($filePathToDelete)) {
+        header("Location: deleteimages.php");
+        exit;
+    } else {
+        $statusMsg = "Failed to delete image";
+    }
+}
+
+
+
+
+
+if(isset($_POST['submit'])){
+	// File upload configuration
+   // $targetDir = "uploads/";
+   $targetDir = "uploads/".$_SESSION['table_name']."/";
+ 
+    $allowTypes = array('jpg','png','jpeg','gif','webp');
+	
+	$images_arr = array();
+	foreach($_FILES['images']['name'] as $key=>$val){
+		$image_name = $_FILES['images']['name'][$key];
+		$tmp_name 	= $_FILES['images']['tmp_name'][$key];
+		$size 		= $_FILES['images']['size'][$key];
+		$type 		= $_FILES['images']['type'][$key];
+		$error 		= $_FILES['images']['error'][$key];
+			// Generate a unique filename
+			$uniqueFileName = md5(uniqid(rand(), true)) . '.' . pathinfo($image_name, PATHINFO_EXTENSION);
+
+		// // File upload path
+		// $fileName = basename($_FILES['images']['name'][$key]);
+		$targetFilePath = $targetDir . $uniqueFileName;
+		$newtable=$_SESSION['table_name']."_images";
+		$event_id = $_SESSION['id'];
+		// Check whether file type is valid
+		$fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
+		if(in_array($fileType, $allowTypes)){	
+			// Store images on the server
+			if(move_uploaded_file($_FILES['images']['tmp_name'][$key],$targetFilePath)){
+				$images_arr[] = $targetFilePath;
+				
+			//	$insert = $conn->query("INSERT into images (file_name, uploaded_on) VALUES ('".$targetFilePath."', NOW())");
+			$insert = $conn->query("INSERT into $newtable (file_name, uploaded_on, event_id) VALUES ('".$targetFilePath."', NOW(),$event_id)");
+			// var_dump("INSERT into $newtable (file_name, uploaded_on, event_id) VALUES ('".$targetFilePath."', NOW(),$event_id)");
+			// exit();
+				if($insert){
+					$count = $key + 1;
+					$statusMsg = " ".$count. " image file has been uploaded successfully.";
+					header("location: deleteimages.php");
+				}else{
+					$statusMsg = "Failed to upload image";
+				} 
+				
+			}else{
+				$statusMsg = "Sorry, there was an error uploading your file.";
+			}
+		}else{
+			$statusMsg = 'Sorry, only JPG, JPEG, PNG, & GIF files are allowed to upload.';
+		}
+	}
+	
+
+}
+?>

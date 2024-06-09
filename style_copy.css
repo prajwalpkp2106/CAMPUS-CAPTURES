@@ -1,0 +1,310 @@
+/* for cards */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+.h1{
+    display:block;
+    margin: auto;
+    width: auto;
+}
+.h11{
+    width:100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body {
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* background: linear-gradient(45deg, #009688, #babd0b, #8027a6); */
+      /* background: linear-gradient(to bottom right, #ffffff,#96a1ff,#85ddfd);
+  background: linear-gradient(to left,#85ddfd,#96a1ff); */
+  background:#02025b;
+
+    flex-wrap: wrap;
+}
+
+.maindiv{
+    display:flex;
+    align-items: center;
+}
+
+nav{
+    
+    background:  rgb(9, 48, 104);
+    height: 80px;
+    width: 100%;
+    /* z-index: 1000; */
+    /* z-index: -1; */
+
+    /* position:relative; */
+}
+
+.logosymbol img{
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: 2px;
+    margin-left: 5px;
+  
+  
+  }
+  label.logo{
+    color:#ffffff;
+    font-size: 30px;
+    font-family:   'Montserrat', sans-serif;
+    line-height: 80px;
+    padding: 0 30px;
+    padding-left: 100px;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  nav ul li a[href="/campus_captures/adminlogin.php"] {
+    border: 2px solid lightblue;
+    padding: 10px; /* Optional: Add padding for better visual appearance */
+  }  
+
+nav ul {
+    float: right;
+    margin: 0;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px ;
+    margin: 0 10px;
+}
+
+nav ul li a{
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    padding: 7px 13px ;
+    border-radius: 3px;
+    text-transform: uppercase;    
+}
+
+a.active,a:hover{
+    background: #135bd7;
+    transition: .25s;
+}
+.container {
+    max-width: 420px; /* Adjust the width as needed */
+    margin: 20 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px; /* Adjust the gap between cards as needed */
+    padding: 50px;
+}
+
+.card {
+    width: 350px; /* Adjust the width as needed */
+    height: 300px; /* Adjust the height as needed */
+    background: #9de0ff;
+    border-radius: 20px;
+    box-shadow: 0 35px 80px rgba(0,0,0,0.15);
+    transition: 0.5s;
+}
+
+
+
+.container .card{
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 350px;
+    height: 300px;
+    background: #9de0ff;
+    border-radius:20px;
+    box-shadow: 0 35px 80px rgba(0,0,0,0.15);
+    transition: 0.5s;
+
+}
+
+.container .card:hover{
+    height: 400px;
+
+}
+/* 
+.container .card .imgBX{
+    position: absolute;
+    top: 20px;
+    width: 300px;
+    height: 220px;
+    background: #333;
+    border-radius: 12px;
+    overflow: auto;
+    transition: 0.5s;     
+} */
+
+
+.container .card .imgBX {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 220px;
+    background: #333;
+    border-radius: 12px;
+    overflow: auto;
+    transition: 0.5s;
+  }
+  
+  /* .container .card .imgBX img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+   */
+   .container .card:hover .imgBX {
+    position: absolute;
+    top: -100px;
+    left: 40%;
+    transform: translateX(-50%);
+    scale: 0.75;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.2);
+  }
+  h3.date {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333333;
+    /* Add any other CSS properties you desire */
+  }
+
+.container .card .imgBX img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    
+}
+
+.container .card .content{
+    position: absolute;
+    top: 252px;
+    width: 100%;
+    padding: 0px 30px;
+    height: 30px; 
+    overflow: auto;
+    /* auto - scroll if lengthy text  */
+    text-align: center;
+    transition: 0.5s;
+    
+}
+
+.container .card:hover .content{
+    top:130px;
+    height: 250px;
+
+}
+
+.container .card .content h2{
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #0d0064;
+    /* color: var(--clr); */
+}
+
+.container .card .content p {
+    color: black;
+
+}
+.container .card .content a{
+    position: relative;
+    top: 15px;
+    display: inline-block;
+    padding: 12px 25px;
+    background: var(--clr);
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.headline{
+    display:flex;
+    justify-content:center;
+}
+
+h1 {
+    font-size: 100px;
+    margin-top: 0;
+    margin-bottom:0;
+  /* margin-top: 100;
+  margin-bottom:0; */
+  text-align: center;
+  text-transform: uppercase;
+  font-family:'Courier New', Courier, monospace;
+  overflow: hidden;
+  /* font-size: 100px;
+  margin-top: 0;
+  margin-bottom:0;
+  color: rgb(28, 2, 99);
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif; */
+  /* overflow: hidden; */
+   /* Prevent the overflow of characters during animation */
+  white-space: nowrap; /* Keep the text in a single line */
+  animation: typewriter 2s steps(40) 10ms 1 normal both; /* Adjust the animation properties as desired */
+  transition:color 1s;
+}
+
+@keyframes typewriter {
+  0% {
+    width: 0; /* Start with zero width */
+    /* color: rgb(28, 2, 99); */
+    color:rgb(213 176 5 / 0%);
+  }
+  100% {
+    width: 100%; /* Expand the width to show complete text */
+    background:#c2f3ff;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+  }
+}
+
+li a{
+    text-decoration: none;
+}
+li a:hover{
+    text-decoration: none;
+    background: linear-gradient(to left,#7cc7e3,#96a1ff);
+}
+.corner-image {
+    position: absolute;
+    top: 100px; /* Adjust this value to your layout */
+    right: 60px; /* Adjust this value to your layout */
+    /* z-index: 999; Ensure it's above other content */
+    
+  
+}
+.fit-image {
+   
+    max-width: 150px; /* Adjust the max width */
+    max-height: 150px; /* Adjust the max height */
+    width: auto;
+    height: auto;
+    border-radius: 150px;
+    border: 3px solid white;
+}
