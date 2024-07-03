@@ -42,7 +42,7 @@ The project is divided into three major parts:
 
 2. Navigate to the project directory:
     ```bash
-    cd projectname
+    cd CAMPUS-CAPTURES
     ```
 
 3. Set up the database:
@@ -66,4 +66,5 @@ The project is divided into three major parts:
 <img src="screenshots/Screenshot (631).png" alt="Image Description">
 <img src="screenshots/Screenshot (632).png" alt="Image Description">
 <img src="screenshots/Screenshot (633).png" alt="Image Description">
+<h3>phpMyAdmin</h3>
 <img src="screenshots/Screenshot (634).png" alt="Image Description">
