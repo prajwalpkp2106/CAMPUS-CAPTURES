@@ -60,10 +60,10 @@ The project is divided into three major parts:
 ## Screenshots
 
 <img src="screenshots/Screenshot (627).png" alt="Image Description">
-<img src="Screenshot (628).png" alt="Image Description">
-<img src="Screenshot (629).png" alt="Image Description">
-<img src="Screenshot (630).png" alt="Image Description">
-<img src="Screenshot (631).png" alt="Image Description">
-<img src="Screenshot (632).png" alt="Image Description">
-<img src="Screenshot (633).png" alt="Image Description">
-<img src="Screenshot (634).png" alt="Image Description">
+<img src="screenshots/Screenshot (628).png" alt="Image Description">
+<img src="screenshots/Screenshot (629).png" alt="Image Description">
+<img src="screenshots/Screenshot (630).png" alt="Image Description">
+<img src="screenshots/Screenshot (631).png" alt="Image Description">
+<img src="screenshots/Screenshot (632).png" alt="Image Description">
+<img src="screenshots/Screenshot (633).png" alt="Image Description">
+<img src="screenshots/Screenshot (634).png" alt="Image Description">
