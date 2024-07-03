@@ -64,7 +64,8 @@ The project is divided into three major parts:
 <img src="screenshots/Screenshot (629).png" alt="Image Description">
 <img src="screenshots/Screenshot (630).png" alt="Image Description">
 <img src="screenshots/Screenshot (631).png" alt="Image Description">
+<h3>Admin Page</h3>
 <img src="screenshots/Screenshot (632).png" alt="Image Description">
 <img src="screenshots/Screenshot (633).png" alt="Image Description">
-<h3>phpMyAdmin</h3>
+<h3>phpMyAdmin Database </h3>
 <img src="screenshots/Screenshot (634).png" alt="Image Description">
